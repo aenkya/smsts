@@ -12,6 +12,8 @@ export class Routes {
         app.get('/healthcheck', (req: Request, res: Response) => {
             res.status(200).send({message: 'ok'});
         });
-        app.post('/sms', this.smsController.addNewSms);
+        app.post('/sms', this.smsController.addNewSms)
+            .get('/sms', this.smsController.getAllSms);
+        app.get('/sms/:smsId', this.smsController.getSmsById);
     }
 }
