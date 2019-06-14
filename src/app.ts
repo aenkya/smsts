@@ -1,14 +1,16 @@
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
-import * as mongoose from 'mongoose';
+import { Routes } from './routes';
 
 class App {
 
     public app: express.Application;
+    public routes: Routes = new Routes();
 
     constructor() {
         this.app = express();
         this.config();
+        this.routes.Routes(this.app);
     }
 
     private config(): void {
