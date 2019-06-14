@@ -23,7 +23,8 @@ class App {
 
     private mongoSetup(): void {
         const connOptions = {
-            useNewUrlParser: true
+            useNewUrlParser: true,
+            useCreateIndex: true
         }
         try {
             mongoose.connect(config.DB_URI, connOptions);
