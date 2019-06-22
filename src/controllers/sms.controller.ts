@@ -12,7 +12,7 @@ export class SmsController {
         });
     }
 
-    public getAllSms (res: Response) {
+    public getAllSms (req: Request, res: Response) {
         Sms.find({}, (err, sms) => {
             if (err) res.send(err);
             res.json(sms);
