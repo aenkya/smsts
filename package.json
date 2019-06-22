@@ -39,5 +39,8 @@
     "sinon": "^7.3.2",
     "supertest": "^4.0.2",
     "typescript": "^3.5.1"
+  },
+  "devDependencies": {
+    "ts-node": "^8.3.0"
   }
 }
