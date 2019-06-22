@@ -1,0 +1,16 @@
+import app from '../app';
+import * as request from 'supertest';
+import * as mongoose from 'mongoose';
+
+describe('GET /', ()=> {
+    afterAll(async done => {
+        mongoose.disconnect();
+        done();
+    });
+
+    it('returns welcome message', async()=> {
+        const res = await request(app).get('/');
+        expect(res.body).toHaveProperty('message');
+        expect(res.body.message).toEqual('Welcome to the SMS TS API');
+    });
+});
