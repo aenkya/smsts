@@ -18,9 +18,4 @@ describe('GET /', ()=> {
         expect(res.body).toHaveProperty('message');
         expect(res.body.message).toEqual('Welcome to the SMS TS API');
     });
-
-    it('returns healthcheck alert', async () => {
-        const res = await req.get('/healthcheck');
-        expect(res.body.message).toBe('ok');
-    });
 });
