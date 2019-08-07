@@ -33,4 +33,4 @@ const smsSchema = new Schema({
     }
 });
 
-export const Sms = mongoose.model<Sms>('sms', smsSchema);
+export const SmsModel = mongoose.model<Sms>('sms', smsSchema);
